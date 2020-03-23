@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-12 col-lg-8 m-auto">
                 <h5>Student Form</h5>
-                <form action="">
+                <form action="."> {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-6">
                             <input type="text" class="form-control" placeholder="Enter First name:">
@@ -29,6 +29,7 @@
                         <div class="form-group col-12">
                             <input type="text" class="form-control" placeholder="Enter Email Address">
                         </div>
+                        <button class="btn btn-primary shadow-none">Send</button>
                     </div>
                 </form>
             </div>
