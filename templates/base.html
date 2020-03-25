@@ -10,29 +10,64 @@
             color: green;
             font-size: 25px;
         }
+        
+        .text-box {
+            padding-top: 20px;
+            color: #2e2e2e;
+            margin-top: 20px;
+            background-color: #d8d8d8;
+            resize: none;
+            height: 230px;
+            width: 5000px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-8 m-auto">
-                <h5>Student Form</h5>
-                <form action="."> {% csrf_token %}
-                    <div class="form-row">
-                        <div class="form-group col-6">
-                            <input type="text" class="form-control" placeholder="Enter First name:">
-                        </div>
-                        <div class="form-group col-6">
-                            <input type="text" class="form-control" placeholder="Enter Last name">
-                        </div>
-                        <div class="form-group col-12">
-                            <input type="text" class="form-control" placeholder="Enter Email Address">
-                        </div>
-                        <button class="btn btn-primary shadow-none">Send</button>
-                    </div>
-                </form>
-            </div>
+            <textarea class="text-box" name="" id="" cols="30" rows="2" readonly>
+                def modify_num(num):
+                    return num ** 3
+                
+                def modify_second_time(take):
+                    take = take ** 2
+                    modify_num(take)
+
+                 if __name__ == '__main__':
+                    print(modify_second_time(4))
+            </textarea>
+            <h5>Quetion: What will be the output of this code? <br>
+                <p>I don't know buddy</p>
+            </h5>
+            <textarea class="text-box" name="" id="" cols="30" rows="10">
+                def isphonenumber(text):
+                    if len(text) != 12:
+                        return False
+                    for i in range(0,3):
+                        if not text[i].isdecimal():
+                            return False
+                    if text[3] != '-':
+                        return False
+                    for i in range(4,7):
+                        if not text[i].isdecimal():
+                            return False
+                    if text[7] != '-':
+                        return False
+                    for i in range(8,12):
+                        if not text[i].isdecimal():
+                            return False
+                    return True
+
+                if __name__ == '__main__':
+                    print(isphonenumber('000-000-0000'))
+
+                print(isphonenumber("shahvar"))
+            </textarea>
+            <h5>Quetion: What will be the output of this code? <br>
+                <p>I don't know buddy</p>
+            </h5>
+
         </div>
     </div>
 </body>
