@@ -20,6 +20,10 @@
             height: 230px;
             width: 5000px;
         }
+        
+        .row {
+            margin-bottom: 20px !important;
+        }
     </style>
 </head>
 
@@ -40,7 +44,7 @@
             <h5>Quetion: What will be the output of this code? <br>
                 <p>I don't know buddy</p>
             </h5>
-            <textarea class="text-box" name="" id="" cols="30" rows="10">
+            <textarea class="text-box" name="" id="" cols="30" rows="10" readonly>
                 def isphonenumber(text):
                     if len(text) != 12:
                         return False
@@ -63,11 +67,28 @@
                     print(isphonenumber('000-000-0000'))
 
                 print(isphonenumber("shahvar"))
+
+                message = "call me at 415-555-1011 tomorrow. 415-555-9999 is my office"
+
+                for i in range(len(message)):
+                    test = message[i:i+12]
+                    if isphonenumber(test):
+                        print('phone numer found' + test)
             </textarea>
             <h5>Quetion: What will be the output of this code? <br>
                 <p>I don't know buddy</p>
             </h5>
+            <textarea class="text-box" cols="30" rows="10" readonly>
+                # a function that basically return another function called decorator
 
+                def apply_ones(func, arg):
+                    return func(func(arg))
+
+                def add_five(x):
+                    return x + 5
+
+                print(apply_ones(add_five, 10))
+            </textarea>
         </div>
     </div>
 </body>
