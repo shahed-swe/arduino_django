@@ -17,10 +17,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from blog.views import home
+from blog.views import (
+    home,
+    another_page
+)
 
 urlpatterns = [
     path('', home),
+    path('another_page', another_page),
     path('admin/', admin.site.urls),
 ]
 
