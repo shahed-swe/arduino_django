@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+        .card-text {
+            text-align: justify !important;
+        }
+        
+        .web {
+            margin-top: 10px;
+        }
+        
         .take {
             margin: 10px;
         }
@@ -29,8 +37,8 @@
         #particles-js {
             position: absolute;
             width: 100%;
-            height: 100%;
-            background-color: #b61924;
+            height: 300%;
+            background-color: #000000;
             background-image: url("");
             background-repeat: no-repeat;
             background-size: cover;
@@ -69,41 +77,110 @@
             border-radius: 3px 3px 0 0;
             overflow: hidden;
         }
-        
-        .count-particles {
-            border-radius: 0 0 3px 3px;
-        }
-        
-        .position {
-            border: 6px solid white;
-            margin-top: -85px;
-        }
     </style>
 
     <title>Document</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/static/img/Annotation 2020-03-23 124835.png" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/static/img/Annotation 2020-03-23 124835.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="/static/img/Annotation 2020-03-23 124835.png" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
     <!-- particles.js container -->
     <section>
         <div id="particles-js"></div>
     </section>
+
     <section>
-        <div class="card-deck take">
-            <div class="card">
-                <img src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Md Shahed Taludker</h5>
-                    <p class="card-text">Hello folks how are you. I hope you are well by the grace of almighty Allah</p>
-                    <a href="#" class="btn btn-info">Button</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="card">
+                        <img src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Md Shahed Taludker</h5>
+                            <p class="card-text">Hello folks how are you. I hope you are well by the grace of almighty Allah</p>
+                            <a href="#" class="btn btn-info">Button</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Md Shahed Taludker</h5>
-                    <p class="card-text">Hello folks how are you. I hope you are well by the grace of almighty Allah</p>
-                    <a href="#" class="btn btn-info">Button</a>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="card">
+                        <img src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Md Shahed Taludker</h5>
+                            <p class="card-text">Hello folks how are you. I hope you are well by the grace of almighty Allah</p>
+                            <a href="#" class="btn btn-info">Button</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="card">
+                        <img src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Md Shahed Taludker</h5>
+                            <p class="card-text">Hello folks how are you. I hope you are well by the grace of almighty Allah</p>
+                            <a href="#" class="btn btn-info">Button</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,7 +191,7 @@
             <div class="row col-12 col-lg-8 m-auto">
                 <div class="card-deck">
                     <div class="card col-4">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -123,7 +200,7 @@
                         </div>
                     </div>
                     <div class="card col-4">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -132,7 +209,7 @@
                         </div>
                     </div>
                     <div class="card col-4">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                        <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
@@ -147,111 +224,115 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
+                <div class="card-deck">
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm- web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 web">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="card">
-                        <img class="img-fluid w-25" src="/static/img/87104936_869667460144080_1922383742001741824_n.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
     <!-- <script src="/static/js/particles.js"></script> -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script>
