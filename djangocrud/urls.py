@@ -19,12 +19,14 @@ from django.contrib import admin
 from django.urls import path
 from blog.views import (
     home,
-    another_page
+    another_page,
+    particle_page
 )
 
 urlpatterns = [
     path('', home),
-    path('another_page', another_page),
+    path('another_page/', another_page),
+    path('particle/',particle_page),
     path('admin/', admin.site.urls),
 ]
 

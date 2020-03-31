@@ -6,3 +6,6 @@ def home(request):
 
 def another_page(request):
     return render(request, 'another_site.html', {"title" : "Site"})
+
+def particle_page(request):
+    return render(request, 'particles.html', {"title":"particle"})
