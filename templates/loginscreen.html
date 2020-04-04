@@ -5,12 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-
+    <!-- <link rel="stylesheet" href="/static/img/Profile-Header.jpg"> -->
     <title>Document</title>
+    <style>
+        .first-section {
+            margin-top: 0px;
+            height: 635px;
+            background-image: linear-gradient(45deg, #39ff39, #39ff39);
+            overflow: hidden;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            color: black;
+            background-color: #39ff39;
+            border-radius: 0px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            color: black;
+            background-color: #39ff39;
+            border-radius: 0px;
+            border: none;
+            border-bottom: 1px solid gray;
+            box-shadow: none !important;
+        }
+        
+        .btn-info {
+            background-color: #41dd41;
+            border-color: #41dd41;
+        }
+        
+        .btn-info:hover {
+            background-color: green;
+            border-color: #25f825;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        @media only screen and (min-width: 760px) {
+            .first_container_position {
+                margin-left: 140px;
+                margin-top: 170px;
+            }
+            h1 {
+                margin-left: 70px;
+            }
+        }
+        
+        @media only screen and (max-width: 365px) {
+            h1 {
+                margin-left: 17px;
+            }
+        }
+        
+        @media only screen and (min-width: 769px) {
+            h1 {
+                margin-left: 250px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <section class="first-section">
+        <div class="first_container_position">
+            <h1>Registration Panel</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 col-md-10 col-sm-10 mx-auto">
+                        <div class="form-row m-auto">
+                            <div class="form-group col-6 col-lg-4 col-md-6">
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Enter First Name">
+                            </div>
+                            <div class="form-group col-6 col-lg-4 col-md-6">
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Enter Last name">
+                            </div>
+                        </div>
+                        <div class="form-row m-auto">
+                            <div class="form-group col-12 col-lg-8">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter E-main Address">
+                            </div>
+                        </div>
+                        <div class="form-row m-auto">
+                            <div class="form-group col-6 col-lg-4 col-md-6">
+                                <input type="password" class="form-control" name="password_first" id="password_first" placeholder="Enter Password">
+                            </div>
+                            <div class="form-group col-6 col-lg-4 col-md-6">
+                                <input type="password" class="form-control" name="password_last" id="password_last" placeholder="Enter Password Again">
+                            </div>
+                        </div>
+                        <button class="btn btn-info shadow-none btn-block col-12 col-lg-8" id="sub_button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#last_name").css('display', 'none');
+            $("#email").css('display', 'none');
+            $("#password_first").css('display', 'none');
+            $("#password_last").css('display', 'none');
+            $("#sub_button").css('display', 'none');
 
+            $("#first_name").on('input', function() {
+                var input = $("#first_name").val();
+                if (input) {
+                    $("#last_name").css('display', 'block');
+                } else {
+                    $("#last_name").css('display', 'none');
+                    $("#email").css('display', 'none');
+                    $("#password_first").css('display', 'none');
+                    $("#password_last").css('display', 'none');
+                    $("#sub_button").css('display', 'none');
+                }
+            });
+            $("#last_name").on('input', function() {
+                var input = $("#last_name").val();
+                if (input) {
+                    $("#email").css('display', 'block');
+                } else {
+                    $("#email").css('display', 'none');
+                    $("#password_first").css('display', 'none');
+                    $("#password_last").css('display', 'none');
+                    $("#sub_button").css('display', 'none');
+                }
+            });
+            $("#email").on('input', function() {
+                var input = $("#email").val();
+                if (input) {
+                    $("#password_first").css('display', 'block');
+                } else {
+                    $("#password_first").css('display', 'none');
+                    $("#password_last").css('display', 'none');
+                    $("#sub_button").css('display', 'none');
+                }
+            });
+            $("#password_first").on('input', function() {
+                var input = $("#password_first").val();
+                if (input) {
+                    $("#password_last").css('display', 'block');
+                } else {
+                    $("#password_last").css('display', 'none');
+                    $("#sub_button").css('display', 'none');
+                }
+            });
+            $("#password_last").on('input', function() {
+                var input = $("#password_last").val();
+                if (input) {
+                    $("#sub_button").css('display', 'block');
+                } else {
+                    $("#sub_button").css('display', 'none');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
