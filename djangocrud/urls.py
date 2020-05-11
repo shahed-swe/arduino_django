@@ -20,13 +20,15 @@ from django.urls import path
 from blog.views import (
     home,
     another_page,
-    particle_page
+    particle_page,
+    main_page
 )
 
 urlpatterns = [
     path('', home),
     path('another_page/', another_page),
     path('particle/',particle_page),
+    path('main_page',main_page),
     path('admin/', admin.site.urls),
 ]
 

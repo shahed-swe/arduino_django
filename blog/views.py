@@ -9,3 +9,6 @@ def another_page(request):
 
 def particle_page(request):
     return render(request, 'particles.html', {"title": "particle"})
+
+def main_page(request):
+    return render(request, 'homepage.html', {"title":"Insider Page"})
